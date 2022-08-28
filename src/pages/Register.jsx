@@ -1,8 +1,10 @@
-import React from 'react'
+import Production from "./Production"
+
 
 function Register() {
   return (
-    <div>Register</div>
+    // <div>Register</div>
+    <Production />
   )
 }
 

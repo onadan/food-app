@@ -11,6 +11,7 @@ import Orders from "./pages/dashboard/Orders";
 import Profile from "./pages/dashboard/Profile";
 import { AuthProvider } from "./utils/Auth";
 import { RequireAuth } from "./utils/RequireAuth";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/*" element={<NotFound />} />
 
         <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route path=":foodid" element={<FoodDetails />} />
