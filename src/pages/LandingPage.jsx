@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import appstore from "../assets/icons/appstore.svg";
 import playstore from "../assets/icons/playstore.svg";
-import heroimg from "../assets/images/main-pic.png";
+import heroimg from "../assets/images/heroimg.png";
 import { LandingPageCard } from "../components/Cards";
 import { Button002 } from "../components/Button";
 

@@ -13,10 +13,12 @@ const Navbar = () => {
 
       <nav className="flex p-2">
         <ul className="inline-flex">
-          {!auth.user && (
+          {!auth.user ? (
             <>
               <Link to="/login">
-                <li className=""><Button001>Login</Button001></li>
+                <li className="">
+                  <Button001>Login</Button001>
+                </li>
               </Link>
               <Link to="/register">
                 <li className="">
@@ -24,6 +26,12 @@ const Navbar = () => {
                 </li>
               </Link>
             </>
+          ) : (
+            <Link to="/register">
+              <li className="">
+                <Button002>Dashboard</Button002>
+              </li>
+            </Link>
           )}
         </ul>
       </nav>
