@@ -6,10 +6,10 @@ import playstore from "../assets/icons/playstore.svg";
 import heroimg from "../assets/images/heroimg.png";
 import { LandingPageCard } from "../components/Cards";
 import { Button002 } from "../components/Button";
+import { special } from "../data/data";
 
 const LandingPage = () => {
   return (
-
     <div className="bg-[#00302E] text-white overflow-hidden">
       <div className=" max-w-[80rem] mx-auto px-4">
         <Navbar />
@@ -57,45 +57,45 @@ const LandingPage = () => {
             swift delivery to whatever location within Ibadan.
           </p>
           <div className="md:grid md:grid-cols-3 justify-between items-center md:gap-28">
-            <LandingPageCard />
-            <LandingPageCard />
-            <LandingPageCard />
+            {special &&
+              special.map((food) => (
+                <LandingPageCard key={food.id} image={food.image} name={food.name} desc={food.desc}/>
+              ))}
           </div>
         </section>
 
         <section className="my-10">
           <div className="md:grid md:grid-cols-2 gap-10 md:items-center">
-          <div className="mb-5">
-            <header className="w-[4/6] font-extrabold text-2xl md:text-3xl text-[#ffcc1d]">
-              Get notified when we update!
-            </header>
-            <p className="py-4 text-sm sm:w-5/6">
-              Get notified when we add new items to our specials menu, update
-              our price list or have promos!
-            </p>
-          </div>
+            <div className="mb-5">
+              <header className="w-[4/6] font-extrabold text-2xl md:text-3xl text-[#ffcc1d]">
+                Get notified when we update!
+              </header>
+              <p className="py-4 text-sm sm:w-5/6">
+                Get notified when we add new items to our specials menu, update
+                our price list or have promos!
+              </p>
+            </div>
 
-          <div className="">
-            <form className="flex flex-wrap gap-4">
-              <input
-                type="email"
-                name="email"
-                required placeholder="Your Email"
-                className=" p-2 rounded text-[#00302E] outline-none bg-emerald-700 ease-in duration-300 focus:bg-emerald-100"
-              />
+            <div className="">
+              <form className="flex flex-wrap gap-4">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Your Email"
+                  className=" p-2 rounded text-[#00302E] outline-none bg-emerald-700 ease-in duration-300 focus:bg-emerald-100"
+                />
 
-              <div><Button002>Get Notified</Button002></div>
-
-            </form>
-          </div>
+                <div>
+                  <Button002>Get Notified</Button002>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
-
-
       </div>
       <Footer />
     </div>
-
   );
 };
 
