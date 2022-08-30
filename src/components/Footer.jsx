@@ -10,6 +10,7 @@ const Footer = () => {
   return (
     <div className="bg-[#0B0D17]">
       <div className="max-w-[80rem] mx-auto px-4">
+        {/* Wants to change this to grid, to make good responsiveness */}
         <div className="flex flex-col sm:flex-row justify-around gap-20 pt-10">
           <div className="flex flex-col gap-4">
             <header className="font-medium text-lg">Company</header>
