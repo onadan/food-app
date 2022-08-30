@@ -1,5 +1,9 @@
 export const Button001 = ({ children }) => {
-  return <div className="cursor p-3 px-4 hover:border-b ">{children}</div>;
+  return (
+    <div>
+      <div className="cursor p-3 px-4 hover:text-[#e2b887] ">{children}</div>
+    </div>
+  );
 };
 
 export const Button002 = ({ children }) => {

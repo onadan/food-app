@@ -5,7 +5,7 @@ import appstore from "../assets/icons/appstore.svg";
 import playstore from "../assets/icons/playstore.svg";
 import heroimg from "../assets/images/heroimg.png";
 import { LandingPageCard } from "../components/Cards";
-import { Button002 } from "../components/Button";
+import { Button003 } from "../components/Button";
 import { special } from "../data/data";
 
 const LandingPage = () => {
@@ -87,7 +87,7 @@ const LandingPage = () => {
                 />
 
                 <div>
-                  <Button002>Get Notified</Button002>
+                  <Button003>Get Notified</Button003>
                 </div>
               </form>
             </div>
