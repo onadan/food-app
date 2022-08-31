@@ -26,5 +26,5 @@ body {
 }
 
 .input-btn {
-@apply block px-2 py-4 my-2 text-[#00302e] outline-none focus:border focus:border-emerald-700 rounded bg-emerald-100
+@apply block px-2 py-4 my-2 text-[#00302e] outline-none border focus:border focus:border-emerald-700 rounded
 }

@@ -73,7 +73,7 @@ function Register() {
               REGISTER
             </button>
             <Link
-              to="/login"
+              to="../login"
               className="text-center my-4 text-[#00302e] hover:underline"
             >
               Already have an account.{" "}
