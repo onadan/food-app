@@ -22,7 +22,7 @@ function Login() {
             Welcome to Everybite!
           </header>
 
-          <form onSubmit={handleSubmit} className="py-5 flex flex-col">
+          <form onSubmit={handleSubmit} className="py-5 flex flex-col w-2/3">
             <input
               type="email"
               name="email"
@@ -47,9 +47,13 @@ function Login() {
               className="font-[500] w-full cursor bg-[#00302e] text-white p-3 px-4 rounded-lg mx-2  my-4"
               required
             >
-              REGISTER
+              LOGIN
             </button>
           </form>
+          <div className="flex justify-between w-2/3 text-[#00302e]">
+            <div>Create an account</div>
+            <div>Forget Password</div>
+          </div>
         </div>
       </div>
     </div>

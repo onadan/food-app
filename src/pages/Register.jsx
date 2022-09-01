@@ -8,12 +8,12 @@ function Register() {
     e.preventDefault();
     const myFormData = new FormData(e.target);
     const formDataObj = Object.fromEntries(myFormData.entries());
-    window.localStorage.setItem("user", JSON.stringify(formDataObj));
-    navigate("./login", { replace: true });
+    window.localStorage.setItem("token", JSON.stringify(formDataObj));
+    navigate("../login", { replace: true });
   };
 
   return (
-    <div className="min-h-screen md:max-h-screen overflow-hidden">
+    <div className="min-h-screen md:h-screen">
       <div className="md:grid md:grid-cols-2">
         <div className="hidden md:block h-screen relative">
           <img
@@ -24,12 +24,12 @@ function Register() {
           <div className="bg-[#E2B88766] absolute top-0 left-0 h-full w-full"></div>
         </div>
 
-        <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="flex flex-col items-center justify-center h-full md:h-screen overflow-auto">
           <header className="font-semibold text-2xl py-8 text-[#00302e]">
             Welcome to Everybite!
           </header>
 
-          <form onSubmit={handleSubmit} className="py-5 flex flex-col">
+          <form onSubmit={handleSubmit} className="py-5 flex flex-col w-2/3">
             <input
               type="text"
               name="firstName"
