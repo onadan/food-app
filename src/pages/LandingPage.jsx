@@ -14,7 +14,7 @@ const LandingPage = () => {
       <div className=" max-w-[80rem] mx-auto px-4">
         <Navbar />
 
-        <main className="py-10">
+        <main className="py-10 pt-16">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
             <div className=" sm:w-5/6 md:w-4/6">
               <h1 className="font-medium text-5xl md:text-6xl my-3">

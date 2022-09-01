@@ -10,7 +10,7 @@ import Checkout from "./pages/dashboard/Checkout";
 import Orders from "./pages/dashboard/Orders";
 import Profile from "./pages/dashboard/Profile";
 import { AuthProvider } from "./utils/Auth";
-import { RequireAuth } from "./utils/RequireAuth";
+// import { RequireAuth } from "./utils/RequireAuth";
 import NotFound from "./pages/NotFound";
 
 const App = () => {
@@ -22,7 +22,8 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/*" element={<NotFound />} />
 
-        <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
+        <Route path="/dashboard" element={<Dashboard />}>
+          {/* <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}> */}
           <Route path=":foodid" element={<FoodDetails />} />
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<Checkout />} />

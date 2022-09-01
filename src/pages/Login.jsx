@@ -1,8 +1,12 @@
 import image from "../assets/images/login-img.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("../dashboard");
   };
 
   return (
