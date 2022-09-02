@@ -1,3 +1,6 @@
+import dashicon from '../../assets/icons/dashboard.svg'
+import cart from '../../assets/icons/cart.svg'
+
 const Sidebar = () => {
   return (
     <div>
@@ -25,28 +28,12 @@ const Sidebar = () => {
             <nav>
               <ul className="flex flex-col">
                 <li className="px-2 py-3 inline-flex text-black rounded-lg bg-[#EFEFEF] hover:text-black">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                  >
-                    <path d="m21.743 12.331-9-10c-.379-.422-1.107-.422-1.486 0l-9 10a.998.998 0 0 0-.17 1.076c.16.361.518.593.913.593h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a.998.998 0 0 0 .743-1.669z"></path>
-                  </svg>
+                  <img src={dashicon} alt="" />
                   <p className="mx-2">Dashboard</p>
                 </li>
 
                 <li className="px-2 py-3 inline-flex text-[#707070]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                  >
-                    <path d="M21 4H2v2h2.3l3.521 9.683A2.004 2.004 0 0 0 9.7 17H18v-2H9.7l-.728-2H18c.4 0 .762-.238.919-.606l3-7A.998.998 0 0 0 21 4z"></path>
-                    <circle cx="10.5" cy="19.5" r="1.5"></circle>
-                    <circle cx="16.5" cy="19.5" r="1.5"></circle>
-                  </svg>
+                  <img src={cart} alt="" />
                   <p className="mx-2">Your Cart</p>
                 </li>
 
