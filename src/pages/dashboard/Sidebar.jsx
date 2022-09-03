@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
   return (
     <div>
@@ -35,7 +37,8 @@ const Sidebar = () => {
                   </svg>
                   <p className="mx-2">Dashboard</p>
                 </li>
-                <li className="mt-1 px-2 py-3 inline-flex text-[#707070] rounded-lg hover:bg-[#EFEFEF] hover:text-black">
+                <Link to='cart'>
+                <li className="w-full mt-1 px-2 py-3 inline-flex text-[#707070] rounded-lg hover:bg-[#EFEFEF] hover:text-black">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -48,6 +51,7 @@ const Sidebar = () => {
                   </svg>
                   <p className="mx-2">Your Cart</p>
                 </li>
+                </Link>
                 <li className="mt-1 px-2 py-3 inline-flex text-[#707070] rounded-lg hover:bg-[#EFEFEF] hover:text-black">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +90,7 @@ const Sidebar = () => {
                     />
                   </svg>
 
-                  <p className="mx-2">Log out</p>
+                  <Link to='../../'><p className="mx-2">Log out</p></Link>
                 </li>
               </ul>
             </nav>

@@ -1,10 +1,11 @@
 // import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
 const Dashboard = () => {
   return (
-    <div className="flex h-screen">
-      <div className="">
+    <div className="flex h-screen relative">
+      <div className="hidden md:block">
         <Sidebar />
       </div>
 
@@ -16,6 +17,10 @@ const Dashboard = () => {
         <section>
           <div></div>
         </section>
+      </div>
+
+      <div className="absolute top-0 left-0">
+        <Outlet />
       </div>
     </div>
   );
