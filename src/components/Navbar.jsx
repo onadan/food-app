@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useAuth } from "../utils/Auth";
+import { useAuth } from "../context/Auth";
 import { Button001, Button002 } from "./Button";
 // import logo from "../assets/icons/logo.svg";
 

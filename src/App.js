@@ -9,7 +9,7 @@ import FoodDetails from "./pages/dashboard/FoodDetails";
 import Checkout from "./pages/dashboard/Checkout";
 import Orders from "./pages/dashboard/Orders";
 import Profile from "./pages/dashboard/Profile";
-import { AuthProvider } from "./utils/Auth";
+import { AuthProvider } from "./context/Auth";
 // import { RequireAuth } from "./utils/RequireAuth";
 import NotFound from "./pages/NotFound";
 
