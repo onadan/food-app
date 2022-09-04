@@ -4,11 +4,12 @@ const Cart = () => {
   return (
     <div className="relative">
       <Link to="../../dashboard">
-        <div className="bg-[#8f8f8fa9] h-screen w-screen"></div>
+        <div className="bg-[#C4C4C46B] h-screen w-screen"></div>
       </Link>
 
       <div className="absolute top-0 right-0 w-[30rem] bg-white min-h-screen">
-        Cart<Link to="../../dashboard">Go back</Link>
+        <h1 className="font-bold text-3xl">Cart</h1>
+        <Link to="../../dashboard">Go back</Link>
       </div>
     </div>
   );
