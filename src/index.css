@@ -8,7 +8,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.5rem;
   background: none;
 }
@@ -23,7 +23,7 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a38563;
-}
+} */
 
 .input-btn {
 @apply block px-2 py-4 my-2 text-[#00302e] outline-none border focus:border focus:border-emerald-700 rounded
