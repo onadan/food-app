@@ -6,7 +6,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("../dashboard");
+    navigate('/dashboard');
   };
 
   return (

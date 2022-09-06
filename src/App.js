@@ -9,29 +9,24 @@ import FoodDetails from "./pages/dashboard/FoodDetails";
 import Checkout from "./pages/dashboard/Checkout";
 import Orders from "./pages/dashboard/Orders";
 import Profile from "./pages/dashboard/Profile";
-import { AuthProvider } from "./context/Auth";
-// import { RequireAuth } from "./utils/RequireAuth";
 import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
-    <AuthProvider>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/*" element={<NotFound />} />
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/*" element={<NotFound />} />
 
-        <Route path="/dashboard" element={<Dashboard />}>
-          {/* <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}> */}
-          <Route path=":foodid" element={<FoodDetails />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="checkout" element={<Checkout />} />
-          <Route path="orders" element={<Orders />} />
-          <Route path="profile" element={<Profile />} />
-        </Route>
-      </Routes>
-    </AuthProvider>
+      <Route path="/dashboard" element={<Dashboard />}>
+        <Route path=":foodId" element={<FoodDetails />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="checkout" element={<Checkout />} />
+        <Route path="orders" element={<Orders />} />
+        <Route path="profile" element={<Profile />} />
+      </Route>
+    </Routes>
   );
 };
 

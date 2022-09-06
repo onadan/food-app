@@ -6,7 +6,7 @@ import playstore from "../assets/icons/playstore.svg";
 import heroimg from "../assets/images/heroimg.png";
 import { LandingPageCard } from "../components/Cards";
 import { Button003 } from "../components/Button";
-import { special } from "../data/data";
+import { specials } from "../data/data";
 
 const LandingPage = () => {
   return (
@@ -57,8 +57,8 @@ const LandingPage = () => {
             swift delivery to whatever location within Ibadan.
           </p>
           <div className="md:grid md:grid-cols-3 justify-between items-center md:gap-28">
-            {special &&
-              special.map((food) => (
+            {specials &&
+              specials.map((food) => (
                 <LandingPageCard key={food.id} image={food.image} name={food.name} desc={food.desc}/>
               ))}
           </div>
