@@ -26,7 +26,7 @@ export const FoodCard = ({ id, image, name, desc, price }) => {
           <img src={image} alt="" />
         </div>
         <div className="font-semibold text-lg">{name}</div>
-        <div className="text-xs text-black max-w-[20rem]">{desc}</div>
+        <div className="text-xs text-black max-w-[20rem] p-4">{desc}</div>
         <div className="flex justify-around items-center w-full absolute bottom-0 max-w-[20rem]">
           <p className="font-bold text-sm text-[#00302e]">{price}</p>
           <Link to={`./${id}`}>
