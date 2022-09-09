@@ -30,7 +30,7 @@ const Navbar = () => {
         </Link>
 
       <nav className="flex p-2">
-        <ul className="inline-flex">
+        <ul className="inline-flex text-sm sm:text-lg">
               <Link to="/login">
                 <li className="">
                   <Button001>Login</Button001>
