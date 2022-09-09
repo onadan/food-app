@@ -5,8 +5,9 @@ import { Button001, Button002 } from "./Button";
 const Navbar = () => {
   return (
     <div className="py-4 mb-2 flex justify-between ">
-      <div>
+      <Link to="/">
         <div className="flex items-center">
+
           <div className="mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +27,7 @@ const Navbar = () => {
           </div>
           <div className="font-bold text-2xl py-4">Everybite</div>
         </div>
-      </div>
+        </Link>
 
       <nav className="flex p-2">
         <ul className="inline-flex">

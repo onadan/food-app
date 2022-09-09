@@ -11,7 +11,8 @@ const Footer = () => {
     <div className="bg-[#0B0D17]">
       <div className="max-w-[80rem] mx-auto px-4">
         {/* Wants to change this to grid, to make good responsiveness */}
-        <div className="flex flex-col sm:flex-row justify-around gap-20 pt-10">
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 pt-10">
           <div className="flex flex-col gap-4">
             <header className="font-medium text-lg">Company</header>
             <ul className="font-thin text-sm">
@@ -41,13 +42,24 @@ const Footer = () => {
 
           <div className="flex flex-col gap-4">
             <header className="font-medium text-lg">Install App</header>
-            <img src={playstore} alt="play-store-button" className="max-w-[170px] h-auto"/>
-            <img src={appstore} alt="app-store-button" className="max-w-[170px] h-auto"/>
+            <img
+              src={playstore}
+              alt="play-store-button"
+              className="max-w-[170px] h-auto"
+            />
+            <img
+              src={appstore}
+              alt="app-store-button"
+              className="max-w-[170px] h-auto"
+            />
           </div>
         </div>
+      </div>
 
-        <hr className="my-10 mb-5"/>
-        <div className="pb-4 flex flex-col gap-4 items-center sm:flex-row sm:justify-between">
+      <hr className="my-10 mb-5" />
+
+      <div className="max-w-[80rem] mx-auto px-4">
+        <div className="pb-4 flex flex-col gap-4 sm:items-center sm:flex-row sm:justify-between">
           <div> &copy; {date} Everybite. All rights reserved. </div>
           <div className="flex gap-2">
             <img src={instagram} alt="instagram" />
