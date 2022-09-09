@@ -1,12 +1,30 @@
 import image from "../assets/images/login-img.jpg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { user } from "../data/user";
+import { useState } from "react";
 
 function Login() {
   const navigate = useNavigate();
 
+  const [error, setError] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/dashboard');
+    const myFormData = new FormData(e.target);
+    const { email, password } = Object.fromEntries(myFormData.entries());
+
+    if (email !== user.email) {
+      setError("Incorrect Email");
+    } else if (password !== user.password) {
+      setError("Incorrect Password");
+    } else {
+      navigate("../dashboard", { replace: true });
+    }
+
+    console.log();
+
+    // if()
+    // navigate('/dashboard');
   };
 
   return (
@@ -26,7 +44,7 @@ function Login() {
             Welcome to Everybite!
           </header>
 
-          <form onSubmit={handleSubmit} className="py-5 flex flex-col w-2/3">
+          <form onSubmit={handleSubmit} className="py-5 flex flex-col w-11/12">
             <input
               type="email"
               name="email"
@@ -46,6 +64,8 @@ function Login() {
               autoComplete="true"
             />
 
+            <p className="p-2 text-red-500 mx-auto"> {error}</p>
+
             <button
               type="submit"
               className="font-[500] w-full cursor bg-[#00302e] text-white p-3 px-4 rounded-lg mx-2  my-4"
@@ -53,11 +73,15 @@ function Login() {
             >
               LOGIN
             </button>
+
+            <div className="flex flex-col sm:flex-row items-center sm:justify-between text-[#00302e] flex-wrap w-full">
+              <div className="mb-2">
+                {" "}
+                <Link to="/register">Create an account</Link>
+              </div>
+              <div>Forget Password</div>
+            </div>
           </form>
-          <div className="flex justify-between w-2/3 text-[#00302e]">
-            <div>Create an account</div>
-            <div>Forget Password</div>
-          </div>
         </div>
       </div>
     </div>

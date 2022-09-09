@@ -2,16 +2,14 @@ import { Link } from "react-router-dom";
 
 export const LandingPageCard = ({ image, name, desc }) => {
   return (
-    <div className="flex flex-col items-center my-8 gap-2">
-      <div>
+    <div className="flex flex-col items-center mb-8">
         <img
           src={image}
           alt="stir-fry-pasta"
-          className="max-w-[250px] h-[auto]"
+          className="w-4/5 max-w-[15rem]"
         />
-      </div>
-      <div className="font-bold text-[1.5rem] text-[#ffcc1d]">{name}</div>
-      <div className="text-center font-normal text-lg max-w-[20rem]">
+      <div className="my-4 font-bold text-2xl text-[#ffcc1d]">{name}</div>
+      <div className="text-center font-normal text-md max-w-[20rem]">
         <p>{desc}</p>
       </div>
     </div>

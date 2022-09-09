@@ -56,10 +56,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="my-10 mb-5" />
-
-      <div className="max-w-[80rem] mx-auto px-4">
-        <div className="pb-4 flex flex-col gap-4 sm:items-center sm:flex-row sm:justify-between">
+      <div className="max-w-[80rem] mx-auto p-4 bg-[#111321] mt-4">
+        <div className=" flex flex-col gap-4 sm:items-center sm:flex-row sm:justify-between">
           <div> &copy; {date} Everybite. All rights reserved. </div>
           <div className="flex gap-2">
             <img src={instagram} alt="instagram" />

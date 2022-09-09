@@ -10,6 +10,7 @@ import Checkout from "./pages/dashboard/Checkout";
 import Orders from "./pages/dashboard/Orders";
 import Profile from "./pages/dashboard/Profile";
 import NotFound from "./pages/NotFound";
+import { RequireAuth } from "./context/RequireAuth";
 
 const App = () => {
   return (
@@ -19,7 +20,14 @@ const App = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/*" element={<NotFound />} />
 
-      <Route path="/dashboard" element={<Dashboard />}>
+      <Route
+        path="/dashboard"
+        element={
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
+        }
+      >
         <Route path="details/:foodId" element={<FoodDetails />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />

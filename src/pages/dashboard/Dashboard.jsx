@@ -4,7 +4,23 @@ import Sidebar from "./Sidebar";
 import { special } from "../../data/data";
 
 const Dashboard = () => {
-  const name = "Daniel";
+  const userData = JSON.parse(window.localStorage.getItem("user"));
+
+  const date = new Date();
+  const hours = date.getHours()
+
+  let greeting = 'day'
+
+
+  // Greeting feature
+  if(hours > 17){
+    greeting = 'afternoon'
+  } else if(hours > 12){
+    greeting = 'evening'
+  } else {
+    greeting = 'morning'
+  }
+
 
   return (
     <div className="flex h-screen relative">
@@ -13,8 +29,9 @@ const Dashboard = () => {
       </div>
 
       <div className="pt-10 px-4 overflow-x-hidden w-full">
-        <div className="">
-          <div className="my-4">
+
+        <section>
+          <div className="mb-4 md:hidden">
             <nav className="text-[#00302E] py-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,10 +50,11 @@ const Dashboard = () => {
             </nav>
           </div>
           <header className="font-semibold text-2xl text-[#00302E]">
-            Good morning, {name}.
+            Good {greeting}{userData && ", " + userData.firstName + "."}
           </header>
           <p className="text-sm">What delicious meal are you craving today?</p>
-        </div>
+        </section>
+
         <section className="my-10">
           <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 enter gap-10 flex-wrap">
             {special &&

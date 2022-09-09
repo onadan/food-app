@@ -16,12 +16,12 @@ const LandingPage = () => {
 
         <main className="py-10 pt-16">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-            <div className=" sm:w-5/6 md:w-4/6">
+            <div className=" sm:w-full md:w-4/6 ">
               <h1 className="font-medium text-5xl md:text-6xl my-3">
                 Order <span className="text-[#ffcc1d]">food</span> anytime,
                 anywhere
               </h1>
-              <p className="sm:w-4/5 text-sm font-normal md:text-lg">
+              <p className="w-5/6 text-sm font-normal md:text-lg">
                 Browse from our list of specials to place your order and have
                 food delivered to you in no time. Affordable, fresh, tasty and
                 fast!
@@ -31,7 +31,7 @@ const LandingPage = () => {
                   <img
                     src={heroimg}
                     alt=""
-                    className="max-h-[300px] w-[auto]"
+                    className="max-h-[300px] w-56 sm:w-[auto]"
                   />
                 </div>
                 {/* <div className="flex py-4 flex-wrap gap-2 justify-center sm:justify-start"> */}
@@ -56,7 +56,7 @@ const LandingPage = () => {
             Check our specials of the day and get discounts on all our meals and
             swift delivery to whatever location within Ibadan.
           </p>
-          <div className="md:grid md:grid-cols-3 justify-between items-center md:gap-28">
+          <div className="sm:grid sm:grid-cols-3 justify-between items-center sm:gap-5 mt-5">
             {specials &&
               specials.map((food) => (
                 <LandingPageCard key={food.id} image={food.image} name={food.name} desc={food.desc}/>
@@ -64,7 +64,7 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <section className="my-10">
+        <section className="mt-5 mb-10">
           <div className="md:grid md:grid-cols-2 gap-10 md:items-center">
             <div className="mb-5">
               <header className="w-[4/6] font-extrabold text-2xl md:text-3xl text-[#ffcc1d]">
@@ -83,7 +83,7 @@ const LandingPage = () => {
                   name="email"
                   required
                   placeholder="Your Email"
-                  className=" p-2 rounded text-[#00302E] outline-none bg-emerald-700 ease-in duration-300 focus:bg-emerald-100"
+                  className=" p-2 rounded text-[#00302E] outline-none bg-white ease-in duration-300"
                 />
 
                 <div>

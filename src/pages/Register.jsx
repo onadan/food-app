@@ -8,7 +8,7 @@ function Register() {
     e.preventDefault();
     const myFormData = new FormData(e.target);
     const formDataObj = Object.fromEntries(myFormData.entries());
-    window.localStorage.setItem("token", JSON.stringify(formDataObj));
+    window.localStorage.setItem("user", JSON.stringify(formDataObj));
     navigate("../login", { replace: true });
   };
 
@@ -29,7 +29,7 @@ function Register() {
             Welcome to Everybite!
           </header>
 
-          <form onSubmit={handleSubmit} className="py-5 flex flex-col w-2/3">
+          <form onSubmit={handleSubmit} className="py-5 flex flex-col w-11/12">
             <input
               type="text"
               name="firstName"
