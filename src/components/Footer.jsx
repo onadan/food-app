@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
+      <div className="bg-[#111321]">
       <div className="max-w-[80rem] mx-auto p-4 bg-[#111321] mt-4">
         <div className=" flex flex-col gap-4 sm:items-center sm:flex-row sm:justify-between">
           <div> &copy; {date} Everybite. All rights reserved. </div>
@@ -65,6 +65,7 @@ const Footer = () => {
             <img src={youtube} alt="youtube" />
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

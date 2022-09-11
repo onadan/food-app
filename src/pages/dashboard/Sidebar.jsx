@@ -1,6 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/Auth";
 
 const Sidebar = () => {
+
+  const auth = useAuth()
+
+  const navigate = useNavigate()
+
+  const handleLogOut = () => {
+    auth.logout();
+    navigate("/")
+  }
   return (
     <div>
       <div className="w-[18rem] h-screen overflow-hidden bg-[#FBFBFB]">
@@ -74,7 +84,7 @@ const Sidebar = () => {
                   </svg>
                   <p className="mx-2">Your Profile</p>
                 </li>
-                <li className="mt-1 px-2 py-3 inline-flex text-[#707070] rounded-lg hover:bg-[#EFEFEF] hover:text-black">
+                <li onClick={handleLogOut} className="mt-1 px-2 py-3 inline-flex text-[#707070] rounded-lg hover:bg-[#EFEFEF] hover:text-black">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -90,7 +100,7 @@ const Sidebar = () => {
                     />
                   </svg>
 
-                  <Link to='../../'><p className="mx-2">Log out</p></Link>
+                  <p className="mx-2">Log out</p>
                 </li>
               </ul>
             </nav>

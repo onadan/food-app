@@ -2,29 +2,32 @@ import image from "../assets/images/login-img.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { user } from "../data/user";
 import { useState } from "react";
+import { useAuth } from "../context/Auth";
 
 function Login() {
   const navigate = useNavigate();
+
+  const auth = useAuth();
 
   const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const myFormData = new FormData(e.target);
+
     const { email, password } = Object.fromEntries(myFormData.entries());
 
-    if (email !== user.email) {
+    if (!user) {
+      setError("account not found! Create an account")
+    }else if (email !== user.email) {
       setError("Incorrect Email");
     } else if (password !== user.password) {
       setError("Incorrect Password");
     } else {
+      auth.login(true);
       navigate("../dashboard", { replace: true });
     }
-
-    console.log();
-
-    // if()
-    // navigate('/dashboard');
   };
 
   return (
