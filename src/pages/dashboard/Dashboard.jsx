@@ -2,25 +2,32 @@ import { Outlet } from "react-router-dom";
 import { FoodCard } from "../../components/Cards";
 import Sidebar from "./Sidebar";
 import { special } from "../../data/data";
+import { useState } from "react";
 
 const Dashboard = () => {
+  const [aside, setAside] = useState(false);
+
   const userData = JSON.parse(window.localStorage.getItem("user"));
 
   const date = new Date();
-  const hours = date.getHours()
+  const hours = date.getHours();
 
-  let greeting = 'day'
-
+  let greeting = "day";
 
   // Greeting feature
-  if(hours > 17){
-    greeting = 'afternoon'
-  } else if(hours > 12){
-    greeting = 'evening'
+  if (hours > 17) {
+    greeting = "afternoon";
+  } else if (hours > 12) {
+    greeting = "evening";
   } else {
-    greeting = 'morning'
+    greeting = "morning";
   }
 
+  // console.log(aside);
+
+  const outletOnClick = () => {
+    setAside(!aside)
+  }
 
   return (
     <div className="flex h-screen relative">
@@ -28,11 +35,28 @@ const Dashboard = () => {
         <Sidebar />
       </div>
 
-      <div className="pt-10 px-4 overflow-x-hidden w-full">
+      <div
+        className={`${aside ? "block" : "hidden"} z-10 absolute top-0 left-0`}
+      >
+        <div className="relative overflow-hidden">
+          <div
+            className="bg-[#1b1b1bc4] h-screen w-screen overflow-hidden"
+            onClick={() => setAside(!aside)}
+          ></div>
 
+          <div className="absolute top-0 left-0 overflow-hidden">
+            <Sidebar onclick={outletOnClick}/>
+          </div>
+        </div>
+      </div>
+
+      <div className="pt-10 px-4 overflow-x-hidden w-full">
         <section>
           <div className="mb-4 md:hidden">
-            <nav className="text-[#00302E] py-4">
+            <nav
+              className="text-[#00302E] py-4"
+              onClick={() => setAside(!aside)}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -50,7 +74,8 @@ const Dashboard = () => {
             </nav>
           </div>
           <header className="font-semibold text-2xl text-[#00302E]">
-            Good {greeting}{userData && ", " + userData.firstName + "."}
+            Good {greeting}
+            {userData && ", " + userData.firstName + "."}
           </header>
           <p className="text-sm">What delicious meal are you craving today?</p>
         </section>
