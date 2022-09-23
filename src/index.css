@@ -28,3 +28,12 @@ body {
 .input-btn {
   @apply block px-2 py-4 my-2 text-[#00302e] outline-none border focus:border focus:border-emerald-700 rounded;
 }
+
+th {
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+td {
+  padding: 0.5rem;
+}

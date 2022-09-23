@@ -72,7 +72,6 @@ function Login() {
             <button
               type="submit"
               className="font-[500] w-full cursor bg-[#00302e] text-white p-3 px-4 rounded-lg mx-2  my-4"
-              required
             >
               LOGIN
             </button>
